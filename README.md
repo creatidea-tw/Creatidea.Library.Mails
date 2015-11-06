@@ -140,7 +140,7 @@ You can also add attachments from the data's **Stream**. It can be done by calli
 CiMessage message = new CiMessage();
 message.AddTo("anna@example.com");
 message.From = new MailAddress("john@example.com", "John Smith");
-message.Subject = "Testing the SendGrid Library";
+message.Subject = "Testing the Creatidea Library";
 message.Text = "Hello World!";
 
 using (var attachmentFileStream = new FileStream(@"C:\file.txt", FileMode.Open))
