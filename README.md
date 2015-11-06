@@ -106,23 +106,23 @@ transportWeb.DeliverAsync(myMessage);
 Attachments can be added to a message by calling the **AddAttachment** method and specifying the name and path of the file you want to attach, or by passing a stream. You can include multiple attachments by calling this method once for each file you wish to attach. The following example demonstrates adding an attachment to a message:
 
 ```csharp
-SendGridMessage myMessage = new SendGridMessage();
-myMessage.AddTo("anna@example.com");
-myMessage.From = new MailAddress("john@example.com", "John Smith");
-myMessage.Subject = "Testing the SendGrid Library";
-myMessage.Text = "Hello World!";
+CiMessage message = new CiMessage();
+message.AddTo("anna@example.com");
+message.From = new MailAddress("john@example.com", "John Smith");
+message.Subject = "Testing the Creatidea Library";
+message.Text = "Hello World!";
 
-myMessage.AddAttachment(@"C:\file1.txt");
+message.AddAttachment(@"C:\file1.txt");
 ```
 
 You can also add attachments from the data's **Stream**. It can be done by calling the same method as above, **AddAttachment**, but by passing in the Stream of the data, and the filename you want it to show as in the message.
 
 ```csharp
-SendGridMessage myMessage = new SendGridMessage();
-myMessage.AddTo("anna@example.com");
-myMessage.From = new MailAddress("john@example.com", "John Smith");
-myMessage.Subject = "Testing the SendGrid Library";
-myMessage.Text = "Hello World!";
+CiMessage message = new CiMessage();
+message.AddTo("anna@example.com");
+message.From = new MailAddress("john@example.com", "John Smith");
+message.Subject = "Testing the SendGrid Library";
+message.Text = "Hello World!";
 
 using (var attachmentFileStream = new FileStream(@"C:\file.txt", FileMode.Open))
 {
