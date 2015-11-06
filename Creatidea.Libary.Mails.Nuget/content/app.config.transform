@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <appSettings>
+        <!--Email Settings-->
+        <add key="ciMail.Server" value="" />
+        <add key="ciMail.Port" value="" />
+        <add key="ciMail.Ssl" value="" />
+        <add key="ciMail.Account" value="" />
+        <add key="ciMail.Password" value="" />
+        <add key="ciMail.Sender" value="" />
+        <add key="ciMail.SenderName" value="" />
+    </appSettings>
+</configuration>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Creatidea.Library.Mails</id>
+        <version>1.0.1</version>
+        <title>Creatidea.Library.Mails</title>
+        <authors>Money</authors>
+        <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+        <projectUrl>https://nuget.org/packages/Creatidea.Library.Mails.Nuget</projectUrl>
+        <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command.</description>
+        <summary>A short description of the package. If specified, this shows up in the middle pane of the Add Package Dialog. If not specified, a truncated version of the description is used instead.</summary>
+        <releaseNotes />
+        <copyright>Copyright  2015</copyright>
+        <language>zh-TW</language>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System" targetFramework="" />
+            <frameworkAssembly assemblyName="System.Net" targetFramework="" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="content\app.config.transform" target="content\app.config.transform" />
+        <file src="content\web.config.transform" target="content\web.config.transform" />
+        <file src="lib\Creatidea.Library.Mails.dll" target="lib\Creatidea.Library.Mails.dll" />
+        <file src="tools\init.ps1" target="tools\init.ps1" />
+        <file src="tools\install.ps1" target="tools\install.ps1" />
+        <file src="tools\uninstall.ps1" target="tools\uninstall.ps1" />
+    </files>
+</package>
