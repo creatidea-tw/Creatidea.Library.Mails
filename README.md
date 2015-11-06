@@ -17,8 +17,8 @@ You can either <a href="https://github.com/lettucebo/Creatidea.Libary.Mails.git"
 PM> Install-Package Creatidea.Library.Mails 
 ```
 
-Once you have the SendGrid libraries properly referenced in your project, you can include calls to them in your code. 
-For a sample implementation, check the [Example](https://github.com/sendgrid/sendgrid-csharp/tree/master/SendGrid/Example) folder.
+Once you have the libraries properly referenced in your project, you can include calls to them in your code. 
+For a sample implementation, check the [Example](https://github.com/lettucebo/Creatidea.Libary.Mails/tree/master/Creatidea.Libary.Mails.Example) folder.
 
 Add the following namespaces to use the library:
 ```csharp
@@ -30,7 +30,7 @@ using Creatidea.Library.Mails;
 
 #How to: Create an email
 
-Use the static **new SendGridMessage** constructor to create an email message that is of type **SendGridMessage**. Once the message is created, you can use **SendGridMessage** properties and methods to set values including the email sender, the email recipient, and the subject and body of the email.
+Use the static **new CiMessage** constructor to create an email message that is of type **CiMessage**. Once the message is created, you can use **CiMessage** properties and methods to set values including the email sender, the email recipient, and the subject and body of the email.
 
 The following example demonstrates how to create an email object and populate it:
 
@@ -63,42 +63,61 @@ message.Text = "Hello World plain text!";
 
 #How to: Send an Email
 
-After creating an email message, you can send it using the Web API provided by SendGrid.
+Sending email requires that you supply your smtp information by config OR just set the Client proprty. API Key is the preferred method. API Keys are in beta. To configure API keys, visit https://sendgrid.com/beta/settings/api_keys
 
-Sending email requires that you supply your SendGrid account credentials (username and password) OR a SendGrid API Key. API Key is the preferred method. API Keys are in beta. To configure API keys, visit https://sendgrid.com/beta/settings/api_keys
-
-Using Credentials
-```csharp
-// Create network credentials to access your SendGrid account.
-var username = "your_sendgrid_username";
-var pswd = "your_sendgrid_password";
-
-var credentials = new NetworkCredential(username, pswd);
+Setting Config
+```xml
+<appSettings>
+    <!--Email Settings-->
+    <add key="ciMail.Server" value="" />
+    <add key="ciMail.Port" value="" />
+    <add key="ciMail.Ssl" value="" />
+    <add key="ciMail.Account" value="" />
+    <add key="ciMail.Password" value="" />
+    <add key="ciMail.Sender" value="" />
+    <add key="ciMail.SenderName" value="" />
+</appSettings>
 ```
-To send an email message, use the **DeliverAsync** method on the **Web** transport class, which calls the SendGrid Web API. The following example shows how to send a message.
+
+OR
+
+Setting Client proprty
+```csharp
+var message = new CiMessage();
+
+// smtp info
+message.Client.Server = "smtp.example.com";
+message.Client.Port = 587;
+message.Client.Ssl = true;
+message.Client.Account = "example@example.com";
+message.Client.Pass = "example";
+message.Client.Sender = "test@example.com";
+message.Client.SenderName = "Creatidea";
+```
+To send an email message, use the **Send** method on the **CiMessage** class. The following example shows how to send a message.
 
 
 ```csharp
 // Create the email object first, then add the properties.
-SendGridMessage myMessage = new SendGridMessage();
-myMessage.AddTo("anna@example.com");
-myMessage.From = new MailAddress("john@example.com", "John Smith");
-myMessage.Subject = "Testing the SendGrid Library";
-myMessage.Text = "Hello World!";
+CiMessage message = new CiMessage();
+message.AddTo("anna@example.com");
+message.From = new MailAddress("john@example.com", "John Smith");
+message.Subject = "Testing the Creatidea Library";
+message.Text = "Hello World!";
 
-// Create credentials, specifying your user name and password.
-var credentials = new NetworkCredential("username", "password");
-
-// Create an Web transport for sending email, using credentials...
-//var transportWeb = new Web(credentials);
-
-// ...OR create a Web transport, using API Key (preferred)
-var transportWeb = new Web("This string is an API key");
+// Setting smtp
+message.Client.Server = "smtp.example.com";
+message.Client.Port = 587;
+message.Client.Ssl = true;
+message.Client.Account = "example@example.com";
+message.Client.Pass = "example";
+message.Client.Sender = "test@example.com";
+message.Client.SenderName = "Creatidea";
 
 // Send the email.
-transportWeb.DeliverAsync(myMessage);
+message.Send();
 // If your developing a Console Application, use the following
-// transportWeb.DeliverAsync(myMessage).Wait();
+// message.SendAsync();.Wait();
 ```
 
 #How to: Add an Attachment
