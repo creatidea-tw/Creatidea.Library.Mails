@@ -2,5 +2,3 @@ language: csharp
 solution: Creatidea.Libary.Mails.sln
 install:
 - nuget restore Creatidea.Libary.Mails.sln
-script:
-- xbuild /p:Configuration=Release Creatidea.Libary.Mails.sln
