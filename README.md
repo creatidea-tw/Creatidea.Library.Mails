@@ -1,4 +1,4 @@
-# Creatidea.Libary.Mails
+# Creatidea.Library.Mails
 創鈺共用類別庫系列
 
 [![BuildStatus](https://travis-ci.org/lettucebo/Creatidea.Libary.Mails.png?branch=master)](https://travis-ci.org/lettucebo/Creatidea.Libary.Mails)
