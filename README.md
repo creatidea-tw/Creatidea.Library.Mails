@@ -63,7 +63,7 @@ message.Text = "Hello World plain text!";
 
 #How to: Send an Email
 
-Sending email requires that you supply your smtp information by config OR just set the Client proprty. API Key is the preferred method. API Keys are in beta. To configure API keys, visit https://sendgrid.com/beta/settings/api_keys
+Sending email requires that you supply your smtp information by config OR just set the Client proprty.
 
 Setting Config
 ```xml
