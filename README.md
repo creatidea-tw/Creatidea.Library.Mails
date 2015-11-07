@@ -1,9 +1,9 @@
 # Creatidea.Libary.Mails
 創鈺共用類別庫系列
 
-[![BuildStatus](https://travis-ci.org/lettucebo/Creatidea.Libary.Mails.png?branch=develope)](https://travis-ci.org/lettucebo/Creatidea.Libary.Mails)
+[![BuildStatus](https://travis-ci.org/lettucebo/Creatidea.Libary.Mails.png?branch=master)](https://travis-ci.org/lettucebo/Creatidea.Libary.Mails)
 
-See the [changelog](https://github.com/lettucebo/Creatidea.Libary.Mails/blob/develope/CHANGELOG.md) for updates. 
+See the [changelog](https://github.com/lettucebo/Creatidea.Libary.Mails/blob/master/CHANGELOG.md) for updates. 
 
 #Requirements
 
