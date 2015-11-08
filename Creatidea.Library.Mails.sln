@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creatidea.Libary.Mails.Exam
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC9A93F3-49A0-48E3-A3A4-97F4F07AFC60}"
 	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
 		CHANGELOG.md = CHANGELOG.md
 		README.md = README.md
 	EndProjectSection
