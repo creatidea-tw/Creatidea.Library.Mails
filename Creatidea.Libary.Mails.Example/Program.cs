@@ -17,13 +17,13 @@ namespace Creatidea.Library.Mails.Example
             myMessage.Subject = "Testing the SendGrid Library";
             myMessage.Text = "Hello World! %tag%";
 
-            //myMessage.Client.Server = "smtp.gmail.com";
-            //myMessage.Client.Port = 587;
+            //myMessage.Client.Server = "";
+            //myMessage.Client.Port = ;
             //myMessage.Client.Ssl = true;
-            //myMessage.Client.Account = "no-reply@creatidea.com.tw";
-            //myMessage.Client.Pass = "d}8ED*$?c)78K@z";
-            //myMessage.Client.Sender = "no-reply@creatidea.com.tw";
-            //myMessage.Client.SenderName = "test";
+            //myMessage.Client.Account = "";
+            //myMessage.Client.Pass = "";
+            //myMessage.Client.Sender = "";
+            //myMessage.Client.SenderName = "";
 
             myMessage.Send();
 
