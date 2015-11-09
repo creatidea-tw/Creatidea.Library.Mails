@@ -343,7 +343,6 @@
         /// <summary>
         /// send mail as an asynchronous operation.
         /// </summary>
-        /// <param name="message">The message.</param>
         /// <returns>Task.</returns>
         public async Task SendAsync()
         {

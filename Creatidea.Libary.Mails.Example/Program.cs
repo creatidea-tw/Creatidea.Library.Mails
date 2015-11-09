@@ -27,6 +27,12 @@ namespace Creatidea.Library.Mails.Example
 
             myMessage.Send();
 
+            // OR use send async
+            myMessage.SendAsync();
+
+            // If your developing a Console Application, use the following
+            myMessage.SendAsync().Wait();
+
             Console.WriteLine("Sent " + DateTime.Now);
 
             Console.Read();
