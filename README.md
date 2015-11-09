@@ -116,8 +116,12 @@ message.Client.SenderName = "Creatidea";
 
 // Send the email.
 message.Send();
+
+// OR use send async
+myMessage.SendAsync();
+
 // If your developing a Console Application, use the following
-// message.SendAsync();.Wait();
+myMessage.SendAsync().Wait();
 ```
 
 #How to: Add an Attachment
