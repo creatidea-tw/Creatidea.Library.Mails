@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creatidea.Library.Mails", "Creatidea.Libary.Mails\Creatidea.Library.Mails.csproj", "{9AB329B7-7120-4240-BCA4-869035D431A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creatidea.Library.Mails", "Creatidea.Library.Mails\Creatidea.Library.Mails.csproj", "{9AB329B7-7120-4240-BCA4-869035D431A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creatidea.Library.Mails.Example", "Creatidea.Libary.Mails.Example\Creatidea.Library.Mails.Example.csproj", "{6C14E311-2CBB-42A0-8AB4-345DF38D8805}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creatidea.Library.Mails.Example", "Creatidea.Library.Mails.Example\Creatidea.Library.Mails.Example.csproj", "{6C14E311-2CBB-42A0-8AB4-345DF38D8805}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC9A93F3-49A0-48E3-A3A4-97F4F07AFC60}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creatidea.Library.Mails.Nuget", "Creatidea.Libary.Mails.Nuget\Creatidea.Library.Mails.Nuget.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creatidea.Library.Mails.Nuget", "Creatidea.Library.Mails.Nuget\Creatidea.Library.Mails.Nuget.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

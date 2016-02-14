@@ -62,7 +62,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Creatidea.Libary.Mails\Creatidea.Library.Mails.csproj">
+    <ProjectReference Include="..\Creatidea.Library.Mails\Creatidea.Library.Mails.csproj">
       <Project>{9ab329b7-7120-4240-bca4-869035d431a5}</Project>
       <Name>Creatidea.Library.Mails</Name>
     </ProjectReference>
