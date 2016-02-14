@@ -7,7 +7,7 @@
         <authors>Money</authors>
         <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
         <projectUrl>https://nuget.org/packages/Creatidea.Library.Mails.Nuget</projectUrl>
-        <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+        <iconUrl>http://i.imgur.com/2H44Wnd.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command.</description>
         <summary>A short description of the package. If specified, this shows up in the middle pane of the Add Package Dialog. If not specified, a truncated version of the description is used instead.</summary>

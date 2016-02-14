@@ -1,0 +1,14 @@
+﻿{
+    "CiConfig": {
+        "Version": "1.0.0"
+    },
+    "CiMail": {
+        "Server": "smtp.gmail.com",
+        "Port": "587",
+        "Ssl": "True",
+        "Account": "no-reply@creatidea.com.tw",
+        "Password": "d}8ED*$?c)78K@z",
+        "Sender": "no-reply@creatidea.com.tw",
+        "SenderName": "無人自動信箱"
+    }
+}

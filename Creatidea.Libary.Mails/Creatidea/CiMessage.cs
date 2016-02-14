@@ -12,6 +12,7 @@
     using System.Threading.Tasks;
     using System.Web;
 
+    using global::Creatidea.Library.Configs;
     using global::Creatidea.Library.Mails.Creatidea;
 
     /// <summary>
@@ -391,13 +392,13 @@
             {
                 try
                 {
-                    this.Client.Server = ConfigurationManager.AppSettings["ciMail.Server"];
+                    this.Client.Server = CiConfig.Global.CiMail.Server;
                     if (string.IsNullOrWhiteSpace(this.Client.Server))
-                        throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Server");
+                        throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Server");
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Server");
+                    throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Server");
                 }
             }
 
@@ -405,13 +406,14 @@
             {
                 try
                 {
-                    this.Client.Port = Convert.ToInt32(ConfigurationManager.AppSettings["ciMail.Port"]);
+                    int port = (int)CiConfig.Global.CiMail.Port;
+                    this.Client.Port = CiConfig.Global.CiMail.Port;
                     if (this.Client.Port == default(int))
-                        throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Port");
+                        throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Port");
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Port");
+                    throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Port");
                 }
             }
 
@@ -419,13 +421,13 @@
             {
                 try
                 {
-                    this.Client.Ssl = Convert.ToBoolean(ConfigurationManager.AppSettings["ciMail.Ssl"]);
+                    this.Client.Ssl = CiConfig.Global.CiMail.Ssl;
                     if (this.Client.Ssl == default(bool?))
-                        throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Ssl");
+                        throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Ssl");
                 }
                 catch (Exception)
                 {
-                    throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Ssl");
+                    throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Ssl");
                 }
             }
 
@@ -433,13 +435,13 @@
             {
                 try
                 {
-                    this.Client.Account = ConfigurationManager.AppSettings["ciMail.Account"];
+                    this.Client.Account = CiConfig.Global.CiMail.Account;
                     if (string.IsNullOrWhiteSpace(this.Client.Account))
-                        throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Account");
+                        throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Account");
                 }
                 catch (Exception)
                 {
-                    throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Account");
+                    throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Account");
                 }
             }
 
@@ -447,13 +449,13 @@
             {
                 try
                 {
-                    this.Client.Pass = ConfigurationManager.AppSettings["ciMail.Password"];
+                    this.Client.Pass = CiConfig.Global.CiMail.Password;
                     if (string.IsNullOrWhiteSpace(this.Client.Pass))
-                        throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Password");
+                        throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Password");
                 }
                 catch (Exception)
                 {
-                    throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Password");
+                    throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Password");
                 }
             }
 
@@ -461,13 +463,13 @@
             {
                 try
                 {
-                    this.Client.Sender = ConfigurationManager.AppSettings["ciMail.Sender"];
+                    this.Client.Sender = CiConfig.Global.CiMail.Sender;
                     if (string.IsNullOrWhiteSpace(this.Client.Sender))
-                        throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Sender");
+                        throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Sender");
                 }
                 catch (Exception)
                 {
-                    throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.Sender");
+                    throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Sender");
                 }
             }
 
@@ -475,13 +477,13 @@
             {
                 try
                 {
-                    this.Client.SenderName = ConfigurationManager.AppSettings["ciMail.SenderName"];
+                    this.Client.SenderName = CiConfig.Global.CiMail.SenderName;
                     if (string.IsNullOrWhiteSpace(this.Client.SenderName))
-                        throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.SenderName");
+                        throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.SenderName");
                 }
                 catch (Exception)
                 {
-                    throw new ConfigurationErrorsException("取得 MailServer 資訊發生錯誤: ciMail.SenderName");
+                    throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.SenderName");
                 }
             }
         }
