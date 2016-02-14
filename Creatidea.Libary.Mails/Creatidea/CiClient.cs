@@ -4,7 +4,7 @@
     {
         #region Properties  
         public string Server { get; set; }
-        public int Port { get; set; }   
+        public int Port { get; set; }
         public bool? Ssl { get; set; }
         public string Account { get; set; }
         public string Pass { get; set; }

@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Creatidea.Library.Configs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Creatidea.Library.Configs.1.0.0\lib\Creatidea.Library.Configs.dll</HintPath>
+      <HintPath>..\packages\Creatidea.Library.Configs.1.0.2\lib\Creatidea.Library.Configs.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

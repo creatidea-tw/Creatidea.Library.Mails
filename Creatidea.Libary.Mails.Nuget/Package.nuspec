@@ -2,26 +2,31 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Creatidea.Library.Mails</id>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <title>Creatidea.Library.Mails</title>
         <authors>Money</authors>
+        <owners>Money</owners>
         <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
         <projectUrl>https://nuget.org/packages/Creatidea.Library.Mails.Nuget</projectUrl>
         <iconUrl>http://i.imgur.com/2H44Wnd.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command.</description>
-        <summary>A short description of the package. If specified, this shows up in the middle pane of the Add Package Dialog. If not specified, a truncated version of the description is used instead.</summary>
+        <description>提供郵件寄信功能</description>
+        <summary>創鈺共用類別庫系列</summary>
         <releaseNotes />
-        <copyright>Copyright  2015</copyright>
+        <copyright>Copyright  2016</copyright>
         <language>zh-TW</language>
         <frameworkAssemblies>
             <frameworkAssembly assemblyName="System" targetFramework="" />
             <frameworkAssembly assemblyName="System.Net" targetFramework="" />
         </frameworkAssemblies>
+        <dependencies>
+            <group targetFramework=".NETFramework4.5">
+                <dependency id="Creatidea.Library.Configs" version="1.0.2" />
+            </group>
+        </dependencies>
     </metadata>
     <files>
-        <file src="content\app.config.transform" target="content\app.config.transform" />
-        <file src="content\web.config.transform" target="content\web.config.transform" />
+        <file src="content\App_Data\CiConfig\CiMail.json" target="content\App_Data\CiConfig\CiMail.json" />
         <file src="lib\Creatidea.Library.Mails.dll" target="lib\Creatidea.Library.Mails.dll" />
         <file src="tools\init.ps1" target="tools\init.ps1" />
         <file src="tools\install.ps1" target="tools\install.ps1" />

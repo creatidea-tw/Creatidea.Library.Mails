@@ -406,8 +406,7 @@
             {
                 try
                 {
-                    int port = (int)CiConfig.Global.CiMail.Port;
-                    this.Client.Port = CiConfig.Global.CiMail.Port;
+                    this.Client.Port = Convert.ChangeType(CiConfig.Global.CiMail.Port, TypeCode.Int32);
                     if (this.Client.Port == default(int))
                         throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Port");
                 }
@@ -421,7 +420,7 @@
             {
                 try
                 {
-                    this.Client.Ssl = CiConfig.Global.CiMail.Ssl;
+                    this.Client.Ssl = Convert.ChangeType(CiConfig.Global.CiMail.Ssl, TypeCode.Boolean);
                     if (this.Client.Ssl == default(bool?))
                         throw new ConfigurationErrorsException("取得設定資訊發生錯誤: CiMail.Ssl");
                 }
