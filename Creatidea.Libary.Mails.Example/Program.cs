@@ -1,6 +1,4 @@
-﻿
-
-namespace Creatidea.Library.Mails.Example
+﻿namespace Creatidea.Library.Mails.Example
 {
     using System;
     using System.Net.Mail;
@@ -14,8 +12,8 @@ namespace Creatidea.Library.Mails.Example
             var myMessage = new CiMessage();
             myMessage.AddTo("abc12207@creatidea.com.tw");
             myMessage.From = new MailAddress("no-reply@creatidea.tw", "John Smith");
-            myMessage.Subject = "Testing the SendGrid Library";
-            myMessage.Text = "Hello World! %tag%";
+            myMessage.Subject = "Testing the CiMail Library";
+            myMessage.Text = "Hello World! \r\n Creatidea";
 
 
             //myMessage.Client.Server = "";
